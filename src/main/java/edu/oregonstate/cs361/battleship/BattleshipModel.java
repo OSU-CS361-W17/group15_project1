@@ -9,7 +9,7 @@ public class BattleshipModel {
     private shots[] pHits, pMiss, cHits, cMiss;
     
     //Hits
-    public BattleshipModel(battleShip[] playerBtShips, battleShip[] computerBtShips, shots[] pHits, shots[] pMiss, shots[] cHits, shots[] cMiss) {
+    public BattleshipModel(BattleShip[] playerBtShips, BattleShip[] computerBtShips, shots[] pHits, shots[] pMiss, shots[] cHits, shots[] cMiss) {
         this.playerBtShips = playerBtShips;
         this.computerBtShips = computerBtShips;
         this.pHits = pHits;
@@ -17,30 +17,49 @@ public class BattleshipModel {
         this.cHits = cHits;
         this.cMiss = cMiss;
     }
-    
-    public battleShip[] getplayerBtShips() {
-        return playerBtShips;
+
+    public BattleShip[] getplayerBtShips() {
+        return this.playerBtShips;
     }
-    public battleShip[] getcomputerBtShips() {
-        return computerBtShips;
+    public BattleShip[] getcomputerBtShips() {
+        return this.computerBtShips;
     }
-    public battleShip[] getpHits() {
-        return pHits;
+    public shots[] getpHits() {
+        return this.pHits;
     }
-    public battleShip[] getpMiss() {
-        return pMiss;
+    public shots[] getpMiss() {
+        return this.pMiss;
     }
-    public battleShip[] getcHits() {
-        return cHits;
+    public shots[] getcHits() {
+        return this.cHits;
     }
-    public battleShip[] getcMiss() {
-        return cMiss;
+    public shots[] getcMiss() {
+        return this.cMiss;
     }
 }
 public class BattleShip {
+
+    private String name;
+    private int length, start, end;
+
     //Battleship
-    this.name = name
-    this.length = length;
-    this.start = start;
-    this.end = end;
+    public BattleShip(String name, int length, int start, int end) {
+        this.name = name
+        this.length = length;
+        this.start = start;
+        this.end = end;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    public int getLength() {
+        return this.length;
+    }
+    public int getStart() {
+        return this.start;
+    }
+    public int getEnd() {
+        return this.end;
+    }
 }
